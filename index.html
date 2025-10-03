@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>My Legal Aid – Affordable Legal Help, Simplified</title>
+<meta name="description" content="Get fast, affordable legal help from vetted professionals. Clear pricing, simple steps, and support you can trust." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #0b1020;
+    --card: #11162a;
+    --muted: #9aa4b2;
+    --text: #e8eef8;
+    --brand: #6aa7ff;
+    --brand-2: #7cf3d3;
+    --accent: #ffd166;
+    --danger: #ff6b6b;
+    --ring: rgba(106,167,255,0.35);
+    --shadow: 0 10px 30px rgba(0,0,0,0.45);
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    color: var(--text);
+    background: radial-gradient(1200px 800px at 70% -10%, rgba(106,167,255,0.12), transparent 60%),
+                radial-gradient(900px 600px at 10% 0%, rgba(124,243,211,0.1), transparent 55%),
+                var(--bg);
+    line-height: 1.6;
+  }
+  a { color: inherit; text-decoration: none; }
+  .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+  /* Header */
+  header {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: saturate(140%) blur(8px);
+    background: linear-gradient(to bottom, rgba(11,16,32,0.9), rgba(11,16,32,0.6));
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+  .logo { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: 0.2px; }
+  .logo-mark {
+    width: 32px; height: 32px; border-radius: 10px;
+    background: conic-gradient(from 160deg, var(--brand), var(--brand-2));
+    box-shadow: 0 6px 18px rgba(106,167,255,0.35);
+  }
+  nav ul { display: flex; gap: 24px; list-style: none; padding: 0; margin: 0; }
+  nav a { color: var(--muted); font-weight: 500; }
+  nav a:hover { color: var(--text); }
+  .cta-btn {
+    display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 12px;
+    background: linear-gradient(135deg, var(--brand), var(--brand-2));
+    color: #051220; font-weight: 700; box-shadow: 0 10px 25px rgba(106,167,255,0.35);
+    border: 0; cursor: pointer;
+  }
+
+  /* Hero */
+  .hero { padding: 72px 0 36px; }
+  .hero-grid { display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: 40px; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 10px; padding: 6px 12px; border-radius: 999px; background: rgba(106,167,255,0.12); color: var(--brand); font-weight: 700; font-size: 12px; letter-spacing: 0.8px; text-transform: uppercase; }
+  h1 { margin: 16px 0 10px; font-size: clamp(32px, 6vw, 56px); line-height: 1.08; }
+  .lead { color: var(--muted); font-size: clamp(16px, 2.2vw, 20px); margin-bottom: 26px; }
+  .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+  .secondary-btn { padding: 10px 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.18); color: var(--text); font-weight: 600; background: transparent; }
+  .hero-card {
+    position: relative; padding: 20px; border-radius: 16px; background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+    border: 1px solid rgba(255,255,255,0.08); box-shadow: var(--shadow);
+  }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 18px; }
+  .stat { padding: 14px; border-radius: 12px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06); text-align: center; }
+  .stat strong { font-size: 22px; display: block; }
+
+  /* Trust */
+  .trust { padding: 18px 0 48px; color: var(--muted); }
+  .badges { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .badge { padding: 14px 16px; border-radius: 12px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); text-align: center; }
+
+  /* Services */
+  .section { padding: 56px 0; }
+  .section h2 { font-size: clamp(26px, 4.4vw, 40px); margin: 0 0 10px; }
+  .kicker { color: var(--muted); margin-bottom: 26px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .card { padding: 18px; border-radius: 16px; background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)); border: 1px solid rgba(255,255,255,0.08); box-shadow: var(--shadow); }
+  .icon { width: 40px; height: 40px; border-radius: 10px; display: grid; place-items: center; margin-bottom: 10px; font-weight: 800; color: #071424; }
+  .icon.blue { background: linear-gradient(135deg, var(--brand), #9ec5ff); }
+  .icon.green { background: linear-gradient(135deg, var(--brand-2), #c6fff0); }
+  .icon.gold { background: linear-gradient(135deg, var(--accent), #ffe8a6); }
+  .card h3 { margin: 0 0 8px; }
+  .card p { color: var(--muted); margin: 0 0 12px; }
+  .pill { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 999px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); color: var(--muted); font-size: 12px; }
+
+  /* How It Works */
+  .steps { counter-reset: step; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .step { padding: 18px; border-radius: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); position: relative; }
+  .step:before { counter-increment: step; content: "Step " counter(step); position: absolute; top: 14px; right: 14px; font-size: 12px; color: var(--muted); }
+
+  /* Testimonials */
+  .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .quote { padding: 18px; border-radius: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); }
+  .quote small { color: var(--muted); }
+
+  /* FAQ */
+  .faq { max-width: 900px; margin: 0 auto; }
+  .faq-item { border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; background: rgba(255,255,255,0.03); margin-bottom: 12px; overflow: hidden; }
+  .faq-q { width: 100%; background: transparent; color: var(--text); text-align: left; border: 0; padding: 16px; font-weight: 600; display: flex; align-items: center; justify-content: space-between; }
+  .faq-a { padding: 0 16px 16px; color: var(--muted); display: none; }
+  .faq-item.open .faq-a { display: block; }
+
+  /* CTA */
+  .cta {
+    padding: 36px; border-radius: 16px; background: linear-gradient(135deg, rgba(106,167,255,0.25), rgba(124,243,211,0.18));
+    border: 1px solid rgba(255,255,255,0.16); box-shadow: var(--shadow);
+    display: grid; grid-template-columns: 1.4fr 1fr; gap: 20px; align-items: center;
+  }
+  .cta form { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  label { color: var(--text); font-weight: 600; font-size: 14px; }
+  input, textarea {
+    width: 100%; padding: 12px 12px; border-radius: 10px; background: rgba(255,255,255,0.16);
+    border: 1px solid rgba(255,255,255,0.25); color: #071424; font-weight: 600;
+    outline: none; box-shadow: none;
+  }
+  textarea { min-height: 90px; resize: vertical; }
+  .submit-btn { grid-column: 1 / -1; }
+
+  /* Footer */
+  footer { border-top: 1px solid rgba(255,255,255,0.06); color: var(--muted); padding: 26px 0; }
+
+  /* Utilities */
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+  /* Responsive */
+  @media (max-width: 980px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: repeat(3, 1fr); }
+    .badges { grid-template-columns: repeat(2, 1fr); }
+    .grid { grid-template-columns: 1fr 1fr; }
+    .steps { grid-template-columns: 1fr 1fr; }
+    .quotes { grid-template-columns: 1fr 1fr; }
+    .cta { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    nav ul { display: none; }
+    .stats { grid-template-columns: 1fr 1fr; }
+    .grid, .steps, .quotes { grid-template-columns: 1fr; }
+    .cta form { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#top" class="logo">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span>My Legal Aid</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <a href="#contact" class="cta-btn">Get Free Consultation</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Affordable legal help, simplified</div>
+          <h1>Expert legal support without the complexity or surprise fees.</h1>
+          <p class="lead">Connect with vetted legal professionals for contracts, immigration, family matters, disputes, and more. Clear steps. Transparent pricing. Fast response.</p>
+          <div class="hero-cta">
+            <a class="cta-btn" href="#contact">Book Free Consultation</a>
+            <a class="secondary-btn" href="#services">Explore Services</a>
+          </div>
+        </div>
+        <div>
+          <div class="hero-card">
+            <strong>Popular Requests</strong>
+            <div class="stats">
+              <div class="stat"><strong>24h</strong><small>Doc Review</small></div>
+              <div class="stat"><strong>98%</strong><small>Client Satisfaction</small></div>
+              <div class="stat"><strong>5k+</strong><small>Cases Assisted</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust">
+      <div class="container">
+        <div class="badges" aria-label="Trust Badges">
+          <div class="badge">Fixed, upfront pricing</div>
+          <div class="badge">Secure & confidential</div>
+          <div class="badge">Vetted professionals</div>
+          <div class="badge">Fast response times</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Legal services made approachable</h2>
+        <p class="kicker">Pick what you need—no jargon, no surprises.</p>
+        <div class="grid">
+          <article class="card">
+            <div class="icon blue">A</div>
+            <h3>Contracts & Business</h3>
+            <p>Drafting, review, and guidance for agreements, NDAs, partnership terms, and more.</p>
+            <span class="pill">From $149</span>
+          </article>
+          <article class="card">
+            <div class="icon green">I</div>
+            <h3>Immigration</h3>
+            <p>Visa applications, appeals, sponsor licenses, and document preparation.</p>
+            <span class="pill">From $199</span>
+          </article>
+          <article class="card">
+            <div class="icon gold">F</div>
+            <h3>Family & Personal</h3>
+            <p>Divorce, custody, wills, name changes, and sensitive matters with care.</p>
+            <span class="pill">From $179</span>
+          </article>
+          <article class="card">
+            <div class="icon blue">H</div>
+            <h3>Housing & Disputes</h3>
+            <p>Landlord-tenant issues, small claims, debt recovery, and negotiation.</p>
+            <span class="pill">From $129</span>
+          </article>
+          <article class="card">
+            <div class="icon green">E</div>
+            <h3>Employment</h3>
+            <p>Contracts, grievances, settlement agreements, and workplace rights.</p>
+            <span class="pill">From $159</span>
+          </article>
+          <article class="card">
+            <div class="icon gold">D</div>
+            <h3>Document Review</h3>
+            <p>Fast turnaround on legal document checks with clear, actionable notes.</p>
+            <span class="pill">From $89</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="section">
+      <div class="container">
+        <h2>How it works</h2>
+        <p class="kicker">Three clear steps—done in days, not weeks.</p>
+        <div class="steps">
+          <div class="step">
+            <h3>Tell us what you need</h3>
+            <p>Share a short brief or upload documents. We match you with the right expert.</p>
+          </div>
+          <div class="step">
+            <h3>Get a fixed quote</h3>
+            <p>Clear scope, timeline, and price—no hourly surprises.</p>
+          </div>
+          <div class="step">
+            <h3>Work and resolve</h3>
+            <p>Message securely, track progress, and get results you can rely on.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section">
+      <div class="container">
+        <h2>What clients say</h2>
+        <p class="kicker">Real outcomes from real people and businesses.</p>
+        <div class="quotes">
+          <blockquote class="quote">“Clear pricing and fast turnaround. Saved our startup weeks.”<br/><small>— Priya, Founder</small></blockquote>
+          <blockquote class="quote">“They explained everything without jargon. Felt supported throughout.”<br/><small>— Ahmed, Father</small></blockquote>
+          <blockquote class="quote">“Document review was same day and super helpful.”<br/><small>— James, Contractor</small></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="container">
+        <h2>Frequently asked questions</h2>
+        <div class="faq" role="list">
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false" aria-controls="a1">How fast can you start? <span>+</span></button>
+            <div id="a1" class="faq-a" role="region">For most matters, within 24–48 hours after the initial call and quote.</div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false" aria-controls="a2">Do you offer fixed prices? <span>+</span></button>
+            <div id="a2" class="faq-a" role="region">Yes. We scope the work and provide a fixed fee before you proceed.</div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false" aria-controls="a3">Is my information secure? <span>+</span></button>
+            <div id="a3" class="faq-a" role="region">Absolutely. Your data is encrypted in transit and handled confidentially.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="cta">
+          <div>
+            <h2>Get your free consultation</h2>
+            <p class="kicker">Tell us a bit about your matter. We’ll get back within 24 hours.</p>
+          </div>
+          <form aria-label="Contact form" onsubmit="event.preventDefault(); alert('Thanks! We\'ll be in touch shortly.');">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" placeholder="Jane Doe" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="jane@email.com" required />
+            </div>
+            <div class="field" style="grid-column: 1 / -1;">
+              <label for="message">Brief description</label>
+              <textarea id="message" name="message" placeholder="Tell us about your legal need..." required></textarea>
+            </div>
+            <button class="cta-btn submit-btn" type="submit">Request Consultation</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+      <small>© <span id="year"></span> My Legal Aid. All rights reserved.</small>
+      <div style="display:flex;gap:14px;">
+        <a href="#top">Back to top</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for in-page links
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href').substring(1);
+        const el = document.getElementById(targetId);
+        if (el) {
+          e.preventDefault();
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // FAQ toggle
+    document.querySelectorAll('.faq-q').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.faq-item');
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        // close others
+        document.querySelectorAll('.faq-item').forEach(function(i) {
+          if (i !== item) {
+            i.classList.remove('open');
+            i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+          }
+        });
+        // toggle current
+        item.classList.toggle('open');
+        this.setAttribute('aria-expanded', (!expanded).toString());
+      });
+    });
+
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
