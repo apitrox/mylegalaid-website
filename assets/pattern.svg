@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 24" width="120" height="24" role="img"
+     aria-label="Decorative pattern">
+    <defs>
+        <linearGradient id="p" x1="0" x2="1">
+            <stop offset="0" stop-color="#60a5fa"/>
+            <stop offset="1" stop-color="#34d399"/>
+        </linearGradient>
+    </defs>
+    <g fill="url(#p)">
+        <rect x="0" y="8" width="16" height="8" rx="2"/>
+        <rect x="26" y="8" width="16" height="8" rx="2"/>
+        <rect x="52" y="8" width="16" height="8" rx="2"/>
+        <rect x="78" y="8" width="16" height="8" rx="2"/>
+        <rect x="104" y="8" width="16" height="8" rx="2"/>
+    </g>
+</svg>

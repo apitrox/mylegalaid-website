@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" role="img"
+     aria-label="Abstract scales of justice">
+    <defs>
+        <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stop-color="#0b1220"/>
+            <stop offset="1" stop-color="#0f172a"/>
+        </linearGradient>
+    </defs>
+    <rect width="800" height="400" fill="url(#bg)"/>
+    <g fill="none" stroke="#60a5fa" opacity=".5">
+        <circle cx="400" cy="200" r="140"/>
+        <circle cx="400" cy="200" r="180"/>
+    </g>
+    <g stroke="#34d399" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M200 170h400"/>
+        <path d="M400 80v180"/>
+        <path d="M270 170c0 36-24 64-54 64s-54-28-54-64z" fill="none"/>
+        <path d="M638 170c0 36-24 64-54 64s-54-28-54-64z" fill="none"/>
+    </g>
+</svg>
