@@ -1,211 +1,77 @@
-/
-/
-Enforce light mode by setting a data attribute
-
-(
-optional hook for future theming
-
-)
-document.documentElement.
-
-setAttribute
-(
-"data-theme"
-,
-"light"
-)
-;
+/* Light-mode baseline using CSS variables */
+.brand-text { font-size: 1.05rem; letter-spacing: .2px; }
 
 
-/
-/
-Mobile navigation toggle
-const navToggle
-
-=
-document.
-
-querySelector
-(
-'.nav-toggle'
-)
-;
-const siteNav
-
-=
-document.
-
-getElementById
-(
-'site-nav'
-)
-;
+.nav-toggle { display: none; background: transparent; border: 0; padding: .5rem; cursor: pointer; }
+.nav-toggle:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+.nav-toggle-bar { display: block; width: 22px; height: 2px; background: var(--text); margin: 4px 0; }
 
 
-if
+.site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 1rem; align-items: center; }
+.site-nav a { color: var(--text); text-decoration: none; font-weight: 600; }
+.site-nav a:hover { color: var(--link); }
 
-(
-navToggle & & siteNav
 
-)
-{
-navToggle.
+/* Buttons */
+.btn { display: inline-block; border-radius: var(--radius); padding: .7rem 1rem; border: 1px solid var(--border); text-decoration: none; font-weight: 600; box-shadow: var(--shadow); }
+.btn-primary { background: var(--primary); color: var(--primary-contrast); border-color: transparent; }
+.btn-primary:hover { filter: brightness(0.95); }
+.btn-outline { background: transparent; color: var(--text); }
 
-addEventListener
-(
-'click'
-,
-(
-)
-=
->
-{
-    const expanded = navToggle . getAttribute('aria-expanded') = = = 'true'
-;
-navToggle.
 
-setAttribute
-(
-'aria-expanded'
-,
-String
-(
-!
-expanded
-)
-)
-;
-siteNav.classList.
+/* Hero */
+.hero { background: linear-gradient(180deg, var(--bg), var(--bg-alt)); border-bottom: 1px solid var(--border); }
+.hero-inner { display: grid; grid-template-columns: 1.2fr .8fr; gap: 2rem; align-items: center; padding: 4rem 0; }
+.hero h1 { font-size: clamp(2rem, 2.8vw, 3rem); line-height: 1.15; margin: 0 0 .75rem; }
+.hero p { color: var(--muted); margin: 0 0 1.25rem; }
+.hero-cta { display: flex; gap: .75rem; flex-wrap: wrap; }
+.hero-art { border-radius: var(--radius); box-shadow: var(--shadow); background: #fff; }
 
-toggle
-(
-'open'
-)
-;
+
+/* Sections */
+.section { padding: 3rem 0; }
+.section-alt { background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.section-title { font-size: 1.5rem; margin: 0 0 1.5rem; }
+
+
+/* Cards */
+.grid.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; box-shadow: var(--shadow); }
+.card h3 { margin: .75rem 0 .25rem; }
+.card p { color: var(--muted); margin: 0 0 .75rem; }
+.card-link { font-weight: 600; color: var(--link); text-decoration: none; }
+.card-icon { width: 40px; height: 40px; }
+
+
+/* Resource list */
+.resource-list { margin: 0; padding: 0; list-style: none; display: grid; gap: .75rem; }
+.resource-list a { text-decoration: none; color: var(--link); font-weight: 600; }
+
+
+/* Contact form */
+.contact-form { display: grid; gap: 1rem; max-width: 640px; }
+.form-row { display: grid; gap: .35rem; }
+input, textarea { width: 100%; border: 1px solid var(--border); border-radius: 10px; padding: .8rem .9rem; font: inherit; background: #fff; color: var(--text); }
+input:focus, textarea:focus { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+
+/* Footer */
+.site-footer { background: var(--bg); border-top: 1px solid var(--border); }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.25rem 0; }
+.footer-nav { list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; }
+.footer-nav a { text-decoration: none; color: var(--muted); }
+.footer-nav a:hover { color: var(--link); }
+
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .grid.cards { grid-template-columns: 1fr 1fr; }
 }
-)
-;
-}
-
-
-/
-/
-Current year in footer
-const yearEl
-
-=
-document.
-
-getElementById
-(
-'year'
-)
-;
-if
-
-(
-yearEl
-
-)
-{
-yearEl.textContent
-
-=
-new
-Date
-(
-)
-.
-getFullYear
-(
-)
-;
-}
-
-
-/
-/
-Basic client-side form handler
-
-(
-placeholder
-
-)
-const contactForm
-
-=
-document.
-
-querySelector
-(
-'.contact-form'
-)
-;
-if
-
-(
-contactForm
-
-)
-{
-contactForm.
-
-addEventListener
-(
-'submit'
-,
-(
-e
-)
-=
->
-{
-e.
-
-preventDefault
-(
-)
-;
-    const formData = new FormData(contactForm)
-;
-/
-/
-TODO
-:
-replace
-with
-real
-endpoint
-console
-.
-log
-(
-'Form submission:'
-,
-Object
-.
-fromEntries
-(
-formData
-.
-entries
-(
-)
-)
-)
-;
-alert
-(
-'Thanks! Your message has been received.'
-)
-;
-contactForm.
-
-reset
-(
-)
-;
-}
-)
-;
+@media (max-width: 640px) {
+    .grid.cards { grid-template-columns: 1fr; }
+    .nav-toggle { display: inline-block; }
+    .site-nav { position: absolute; left: 0; right: 0; top: 64px; background: var(--bg); border-bottom: 1px solid var(--border); transform: translateY(-120%); transition: transform .2s ease; }
+    .site-nav.open { transform: translateY(0); }
+    .site-nav ul { flex-direction: column; align-items: flex-start; padding: .75rem 1rem; }
 }
