@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="220" viewBox="0 0 1200 220" role="img" aria-label="myLegalAid wordmark">
+      <title>myLegalAid wordmark</title>
+      
+      <text x="0" y="150" font-family="Inter, Helvetica, Arial, sans-serif" font-size="160" fill="#1A4D8F">
+        <tspan font-style="italic">my</tspan><tspan dx="8" font-weight="700">LegalAid</tspan>
+      </text>
+    
+      
+    </svg>
