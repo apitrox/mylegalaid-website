@@ -21,13 +21,24 @@
     </a>
     <nav aria-label="Primary">
       <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#how">How it works</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#services" data-i18n="nav-services">Services</a></li>
+        <li><a href="#how" data-i18n="nav-how">How it works</a></li>
+        <li><a href="#testimonials" data-i18n="nav-testimonials">Testimonials</a></li>
+        <li><a href="#faq" data-i18n="nav-faq">FAQ</a></li>
+        <li class="lang-dropdown">
+          <button class="lang-btn" id="langBtn" aria-label="Select language">
+            <span id="currentLang">EN</span>
+            <span class="arrow">▼</span>
+          </button>
+          <ul class="lang-menu" id="langMenu">
+            <li><button data-lang="en">English (EN)</button></li>
+            <li><button data-lang="es">Español (ES)</button></li>
+            <li><button data-lang="fr">Français (FR)</button></li>
+          </ul>
+        </li>
       </ul>
     </nav>
-    <a href="#contact" class="cta-btn">Get Free Consultation</a>
+    <a href="#contact" class="cta-btn" data-i18n="cta-header">Get Free Consultation</a>
   </div>
 </header>
 
@@ -36,21 +47,21 @@
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <div class="eyebrow">Affordable legal help, simplified</div>
-        <h1>Expert legal support without the complexity or surprise fees.</h1>
-        <p class="lead">Connect with vetted legal professionals for contracts, immigration, family matters, disputes, and more. Clear steps. Transparent pricing. Fast response.</p>
+        <div class="eyebrow" data-i18n="hero-eyebrow">Affordable legal help, simplified</div>
+        <h1 data-i18n="hero-title">Expert legal support without the complexity or surprise fees.</h1>
+        <p class="lead" data-i18n="hero-lead">Connect with vetted legal professionals for contracts, immigration, family matters, disputes, and more. Clear steps. Transparent pricing. Fast response.</p>
         <div class="hero-cta">
-          <a class="cta-btn" href="#contact">Book Free Consultation</a>
-          <a class="secondary-btn" href="#services">Explore Services</a>
+          <a class="cta-btn" href="#contact" data-i18n="cta-book">Book Free Consultation</a>
+          <a class="secondary-btn" href="#services" data-i18n="cta-explore">Explore Services</a>
         </div>
       </div>
       <div>
         <div class="hero-card">
-          <strong>Popular Requests</strong>
+          <strong data-i18n="popular-requests">Popular Requests</strong>
           <div class="stats" aria-label="Popular request statistics">
-            <div class="stat"><strong>24h</strong><small>Doc Review</small></div>
-            <div class="stat"><strong>98%</strong><small>Client Satisfaction</small></div>
-            <div class="stat"><strong>5k+</strong><small>Cases Assisted</small></div>
+            <div class="stat"><strong>24h</strong><small data-i18n="stat-doc">Doc Review</small></div>
+            <div class="stat"><strong>98%</strong><small data-i18n="stat-satisfaction">Client Satisfaction</small></div>
+            <div class="stat"><strong>5k+</strong><small data-i18n="stat-cases">Cases Assisted</small></div>
           </div>
         </div>
       </div>
@@ -61,10 +72,10 @@
   <section class="trust">
     <div class="container">
       <div class="badges" aria-label="Trust Badges">
-        <div class="badge">Fixed, upfront pricing</div>
-        <div class="badge">Secure & confidential</div>
-        <div class="badge">Vetted professionals</div>
-        <div class="badge">Fast response times</div>
+        <div class="badge" data-i18n="badge-pricing">Fixed, upfront pricing</div>
+        <div class="badge" data-i18n="badge-secure">Secure & confidential</div>
+        <div class="badge" data-i18n="badge-vetted">Vetted professionals</div>
+        <div class="badge" data-i18n="badge-fast">Fast response times</div>
       </div>
     </div>
   </section>
@@ -72,44 +83,44 @@
   <!-- Services Section -->
   <section id="services" class="section">
     <div class="container">
-      <h2>Legal services made approachable</h2>
-      <p class="kicker">Pick what you need—no jargon, no surprises.</p>
+      <h2 data-i18n="services-title">Legal services made approachable</h2>
+      <p class="kicker" data-i18n="services-kicker">Pick what you need—no jargon, no surprises.</p>
       <div class="grid">
         <article class="card">
           <div class="icon blue" aria-hidden="true">A</div>
-          <h3>Contracts &amp; Business</h3>
-          <p>Drafting, review, and guidance for agreements, NDAs, partnership terms, and more.</p>
-          <span class="pill">From $149</span>
+          <h3 data-i18n="service1-title">Contracts &amp; Business</h3>
+          <p data-i18n="service1-desc">Drafting, review, and guidance for agreements, NDAs, partnership terms, and more.</p>
+          <span class="pill" data-i18n="service1-price">From $149</span>
         </article>
         <article class="card">
           <div class="icon green" aria-hidden="true">I</div>
-          <h3>Immigration</h3>
-          <p>Visa applications, appeals, sponsor licenses, and document preparation.</p>
-          <span class="pill">From $199</span>
+          <h3 data-i18n="service2-title">Immigration</h3>
+          <p data-i18n="service2-desc">Visa applications, appeals, sponsor licenses, and document preparation.</p>
+          <span class="pill" data-i18n="service2-price">From $199</span>
         </article>
         <article class="card">
           <div class="icon gold" aria-hidden="true">F</div>
-          <h3>Family &amp; Personal</h3>
-          <p>Divorce, custody, wills, name changes, and sensitive matters with care.</p>
-          <span class="pill">From $179</span>
+          <h3 data-i18n="service3-title">Family &amp; Personal</h3>
+          <p data-i18n="service3-desc">Divorce, custody, wills, name changes, and sensitive matters with care.</p>
+          <span class="pill" data-i18n="service3-price">From $179</span>
         </article>
         <article class="card">
           <div class="icon blue" aria-hidden="true">H</div>
-          <h3>Housing &amp; Disputes</h3>
-          <p>Landlord-tenant issues, small claims, debt recovery, and negotiation.</p>
-          <span class="pill">From $129</span>
+          <h3 data-i18n="service4-title">Housing &amp; Disputes</h3>
+          <p data-i18n="service4-desc">Landlord-tenant issues, small claims, debt recovery, and negotiation.</p>
+          <span class="pill" data-i18n="service4-price">From $129</span>
         </article>
         <article class="card">
           <div class="icon green" aria-hidden="true">E</div>
-          <h3>Employment</h3>
-          <p>Contracts, grievances, settlement agreements, and workplace rights.</p>
-          <span class="pill">From $159</span>
+          <h3 data-i18n="service5-title">Employment</h3>
+          <p data-i18n="service5-desc">Contracts, grievances, settlement agreements, and workplace rights.</p>
+          <span class="pill" data-i18n="service5-price">From $159</span>
         </article>
         <article class="card">
           <div class="icon gold" aria-hidden="true">D</div>
-          <h3>Document Review</h3>
-          <p>Fast turnaround on legal document checks with clear, actionable notes.</p>
-          <span class="pill">From $89</span>
+          <h3 data-i18n="service6-title">Document Review</h3>
+          <p data-i18n="service6-desc">Fast turnaround on legal document checks with clear, actionable notes.</p>
+          <span class="pill" data-i18n="service6-price">From $89</span>
         </article>
       </div>
     </div>
@@ -118,20 +129,20 @@
   <!-- How It Works -->
   <section id="how" class="section">
     <div class="container">
-      <h2>How it works</h2>
-      <p class="kicker">Three clear steps—done in days, not weeks.</p>
+      <h2 data-i18n="how-title">How it works</h2>
+      <p class="kicker" data-i18n="how-kicker">Three clear steps—done in days, not weeks.</p>
       <div class="steps">
         <div class="step">
-          <h3>Tell us what you need</h3>
-          <p>Share a short brief or upload documents. We match you with the right expert.</p>
+          <h3 data-i18n="step1-title">Tell us what you need</h3>
+          <p data-i18n="step1-desc">Share a short brief or upload documents. We match you with the right expert.</p>
         </div>
         <div class="step">
-          <h3>Get a fixed quote</h3>
-          <p>Clear scope, timeline, and price—no hourly surprises.</p>
+          <h3 data-i18n="step2-title">Get a fixed quote</h3>
+          <p data-i18n="step2-desc">Clear scope, timeline, and price—no hourly surprises.</p>
         </div>
         <div class="step">
-          <h3>Work and resolve</h3>
-          <p>Message securely, track progress, and get results you can rely on.</p>
+          <h3 data-i18n="step3-title">Work and resolve</h3>
+          <p data-i18n="step3-desc">Message securely, track progress, and get results you can rely on.</p>
         </div>
       </div>
     </div>
@@ -140,12 +151,12 @@
   <!-- Testimonials -->
   <section id="testimonials" class="section">
     <div class="container">
-      <h2>What clients say</h2>
-      <p class="kicker">Real outcomes from real people and businesses.</p>
+      <h2 data-i18n="testimonials-title">What clients say</h2>
+      <p class="kicker" data-i18n="testimonials-kicker">Real outcomes from real people and businesses.</p>
       <div class="quotes">
-        <blockquote class="quote">“Clear pricing and fast turnaround. Saved our startup weeks.”<br/><small>&mdash; Priya, Founder</small></blockquote>
-        <blockquote class="quote">“They explained everything without jargon. Felt supported throughout.”<br/><small>&mdash; Ahmed, Father</small></blockquote>
-        <blockquote class="quote">“Document review was same day and super helpful.”<br/><small>&mdash; James, Contractor</small></blockquote>
+        <blockquote class="quote"><span data-i18n="testimonial1">"Clear pricing and fast turnaround. Saved our startup weeks."</span><br/><small data-i18n="testimonial1-author">&mdash; Priya, Founder</small></blockquote>
+        <blockquote class="quote"><span data-i18n="testimonial2">"They explained everything without jargon. Felt supported throughout."</span><br/><small data-i18n="testimonial2-author">&mdash; Ahmed, Father</small></blockquote>
+        <blockquote class="quote"><span data-i18n="testimonial3">"Document review was same day and super helpful."</span><br/><small data-i18n="testimonial3-author">&mdash; James, Contractor</small></blockquote>
       </div>
     </div>
   </section>
@@ -153,19 +164,19 @@
   <!-- FAQ -->
   <section id="faq" class="section">
     <div class="container">
-      <h2>Frequently asked questions</h2>
+      <h2 data-i18n="faq-title">Frequently asked questions</h2>
       <div class="faq" role="list">
         <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false" aria-controls="a1">How fast can you start? <span aria-hidden="true">+</span></button>
-          <div id="a1" class="faq-a" role="region">For most matters, within 24–48 hours after the initial call and quote.</div>
+          <button class="faq-q" aria-expanded="false" aria-controls="a1"><span data-i18n="faq1-q">How fast can you start?</span> <span aria-hidden="true">+</span></button>
+          <div id="a1" class="faq-a" role="region" data-i18n="faq1-a">For most matters, within 24–48 hours after the initial call and quote.</div>
         </div>
         <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false" aria-controls="a2">Do you offer fixed prices? <span aria-hidden="true">+</span></button>
-          <div id="a2" class="faq-a" role="region">Yes. We scope the work and provide a fixed fee before you proceed.</div>
+          <button class="faq-q" aria-expanded="false" aria-controls="a2"><span data-i18n="faq2-q">Do you offer fixed prices?</span> <span aria-hidden="true">+</span></button>
+          <div id="a2" class="faq-a" role="region" data-i18n="faq2-a">Yes. We scope the work and provide a fixed fee before you proceed.</div>
         </div>
         <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false" aria-controls="a3">Is my information secure? <span aria-hidden="true">+</span></button>
-          <div id="a3" class="faq-a" role="region">Absolutely. Your data is encrypted in transit and handled confidentially.</div>
+          <button class="faq-q" aria-expanded="false" aria-controls="a3"><span data-i18n="faq3-q">Is my information secure?</span> <span aria-hidden="true">+</span></button>
+          <div id="a3" class="faq-a" role="region" data-i18n="faq3-a">Absolutely. Your data is encrypted in transit and handled confidentially.</div>
         </div>
       </div>
     </div>
@@ -176,23 +187,23 @@
     <div class="container">
       <div class="cta">
         <div>
-          <h2>Get your free consultation</h2>
-          <p class="kicker">Tell us a bit about your matter. We’ll get back within 24 hours.</p>
+          <h2 data-i18n="contact-title">Get your free consultation</h2>
+          <p class="kicker" data-i18n="contact-kicker">Tell us a bit about your matter. We'll get back within 24 hours.</p>
         </div>
         <form aria-label="Contact form" onsubmit="event.preventDefault(); alert('Thanks! We\\'ll be in touch shortly.');">
           <div class="field">
-            <label for="name">Name</label>
-            <input id="name" name="name" placeholder="Jane Doe" required />
+            <label for="name" data-i18n="form-name">Name</label>
+            <input id="name" name="name" placeholder="Jane Doe" data-i18n-placeholder="form-name-placeholder" required />
           </div>
           <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="jane@email.com" required />
+            <label for="email" data-i18n="form-email">Email</label>
+            <input id="email" name="email" type="email" placeholder="jane@email.com" data-i18n-placeholder="form-email-placeholder" required />
           </div>
           <div class="field" style="grid-column: 1 / -1;">
-            <label for="message">Brief description</label>
-            <textarea id="message" name="message" placeholder="Tell us about your legal need..." required></textarea>
+            <label for="message" data-i18n="form-message">Brief description</label>
+            <textarea id="message" name="message" placeholder="Tell us about your legal need..." data-i18n-placeholder="form-message-placeholder" required></textarea>
           </div>
-          <button class="cta-btn submit-btn" type="submit">Request Consultation</button>
+          <button class="cta-btn submit-btn" type="submit" data-i18n="form-submit">Request Consultation</button>
         </form>
       </div>
     </div>

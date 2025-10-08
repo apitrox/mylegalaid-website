@@ -38,9 +38,35 @@
     background: conic-gradient(from 160deg, var(--brand), var(--brand-2));
     box-shadow: 0 6px 18px rgba(106,167,255,0.35);
   }
-  nav ul { display: flex; gap: 24px; list-style: none; padding: 0; margin: 0; }
+  nav ul { display: flex; gap: 24px; list-style: none; padding: 0; margin: 0; align-items: center; }
   nav a { color: var(--muted); font-weight: 500; }
   nav a:hover { color: var(--text); }
+
+  /* Language Dropdown */
+  .lang-dropdown { position: relative; }
+  .lang-btn {
+    display: flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 10px;
+    background: #ffffff; border: 1px solid #e6ebf2; color: var(--text); font-weight: 600;
+    cursor: pointer; transition: all 0.2s;
+  }
+  .lang-btn:hover { border-color: var(--brand); }
+  .lang-btn .arrow { font-size: 10px; color: var(--muted); transition: transform 0.2s; }
+  .lang-menu.show + .lang-btn .arrow { transform: rotate(180deg); }
+  .lang-menu {
+    position: absolute; top: calc(100% + 6px); right: 0; min-width: 180px;
+    background: #ffffff; border: 1px solid #e6ebf2; border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(16,24,40,0.12);
+    opacity: 0; visibility: hidden; transform: translateY(-10px);
+    transition: all 0.2s; list-style: none; padding: 6px; margin: 0; z-index: 100;
+  }
+  .lang-menu.show { opacity: 1; visibility: visible; transform: translateY(0); }
+  .lang-menu li { margin: 0; }
+  .lang-menu button {
+    width: 100%; padding: 10px 14px; border: 0; background: transparent;
+    color: var(--text); font-weight: 500; text-align: left; border-radius: 8px;
+    cursor: pointer; transition: background 0.2s;
+  }
+  .lang-menu button:hover { background: rgba(106,167,255,0.1); }
   .cta-btn {
     display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 12px;
     background: linear-gradient(135deg, var(--brand), var(--brand-2));
@@ -135,7 +161,9 @@
     .cta { grid-template-columns: 1fr; }
   }
   @media (max-width: 640px) {
-    nav ul { display: none; }
+    nav ul { display: flex; flex-direction: row; gap: 12px; }
+    nav ul li:not(.lang-dropdown) { display: none; }
+    .lang-dropdown { display: block; }
     .stats { grid-template-columns: 1fr 1fr; }
     .grid, .steps, .quotes { grid-template-columns: 1fr; }
     .cta form { grid-template-columns: 1fr; }
