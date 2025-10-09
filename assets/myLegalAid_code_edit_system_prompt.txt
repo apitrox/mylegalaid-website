@@ -43,4 +43,4 @@
 
 4. <your-coding-instructions-go-here>
 
-5. After making and testing all your updates, display the index.html, script.js, and style.css files and any other files you updated, and also provide a link to click to copy the contents of the file.
+5. After making and testing all your updates, display the index.html, script.js, style.css and tailwind.config.js files and any other files you updated, and also provide a link to click to copy the contents of the file.
