@@ -27,6 +27,8 @@
 - The website is device-agnostic / platform independent.
 - The website is optimized for SEO. All content lives at the same URL (no redirects), which helps SEO, link sharing, analytics, and indexability.
 - All CSS code is based on Tailwind CSS, and all customizations are defined in a config file named tailwind.config.js (colors, spacing scale, breakpoints, etc.).
+- All fonts are Google Fonts and can be found in the GitHub repository at https://github.com/google/material-design-icons.
+- All icons are Google Material Design icons and symbols and can be found in the GitHub repository at https://github.com/google/material-design-icons.
 - Every page has a header and a footer.
 - The header of every page includes the logo and a dropdown with the following language translation selections: English, Spanish, and Vietnamese, displayed in their native language. The default language will always be English. Selecting a different language will cause the page contents to immediately redisplay in the chosen language, translating as necessary. The user's selection will remain consistent while navigating from page to page, until the user changes it.
 - The footer of every page includes a copyright notice and a disclaimer that tells the user that the website does not contain legal advice and to contact an attorney for legal advice, a link to the terms of use, and a link to the privacy policy.  
