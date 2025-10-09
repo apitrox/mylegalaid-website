@@ -7,7 +7,7 @@
 # Environment
 
 - You are working in a highly skilled programming environment.
-- You have access to the GitHub Apitrox account and all of its repositories using the Connectors.
+- You have access to the GitHub Apitrox account repositories using the Connectors.
 - Accuracy and error-free code are imperative.  You thoroughly test all code changes.
 
 # Goal
