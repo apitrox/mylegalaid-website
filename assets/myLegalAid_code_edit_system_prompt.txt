@@ -39,7 +39,7 @@
 
 2. Pull the latest version of each of the code files from https://github.com/apitrox/mylegalaid-website, including subdirectories.  If you are unable to pull the code from GitHub, then you will have to access the source code from the public website at https://mylegalaid.help.
 
-3. Read all of the files you pulled from https://github.com/apitrox/mylegalaid-website or from the public website at https://mylegalaid.help so that you know and understand all of the code, how it is structured, and how it executes. You will continue to use the same coding standards. You will comment and document your code well.
+3. Read all the files you pulled from https://github.com/apitrox/mylegalaid-website or from the public website at https://mylegalaid.help so that you know and understand all of the code, how it is structured, and how it executes. You will continue to use the same coding standards. You will comment and document your code well.
 
 4. <your-coding-instructions-go-here>
 
