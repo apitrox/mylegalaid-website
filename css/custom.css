@@ -446,6 +446,59 @@ a:hover, a:focus {
   }
 }
 
+/* Hero with Image variant */
+.hero.hero-with-image {
+  text-align: left;
+  padding: var(--space-xl) 0 var(--space-2xl);
+}
+
+.hero.hero-with-image p {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media (min-width: 1024px) {
+  .hero.hero-with-image {
+    padding: var(--space-2xl) 0;
+  }
+}
+
+/* Hero with background image variants */
+.hero-bg-eviction {
+  background-image: linear-gradient(135deg, rgba(13, 27, 42, 0.85) 0%, rgba(45, 90, 123, 0.85) 100%),
+                    url('/images/TLA_Hero_Landscape_Woman_Eviction_Notice.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-bg-woman-porch {
+  background-image: linear-gradient(135deg, rgba(13, 27, 42, 0.85) 0%, rgba(45, 90, 123, 0.85) 100%),
+                    url('/images/TLA_Hero_Landscape_Woman_On_Porch.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-bg-couple-flooded {
+  background-image: linear-gradient(135deg, rgba(13, 27, 42, 0.85) 0%, rgba(45, 90, 123, 0.85) 100%),
+                    url('/images/TLA_Hero_Landscape_Couple_Flooded.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-bg-dv {
+  background-image: linear-gradient(135deg, rgba(13, 27, 42, 0.85) 0%, rgba(45, 90, 123, 0.85) 100%),
+                    url('/images/TLA_Hero_Landscape_Woman_Domesic_Violence.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-bg-wheelchair {
+  background-image: linear-gradient(135deg, rgba(13, 27, 42, 0.85) 0%, rgba(45, 90, 123, 0.85) 100%),
+                    url('/images/TLA_Hero_Landscape_Man_In_Wheelchair.png');
+  background-size: cover;
+  background-position: center;
+}
+
 /* ==========================================================================
    Cards
    ========================================================================== */
