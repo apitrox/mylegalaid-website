@@ -1,7 +1,7 @@
 {
-  "name": "MyLegalAid - Free Legal Help Portal",
-  "short_name": "MyLegalAid",
-  "description": "Connect with free legal aid providers in your area. Get help with family law, immigration, housing, and more.",
+  "name": "Texas Legal Aid - Free Legal Help Portal",
+  "short_name": "Texas Legal Aid",
+  "description": "Connect with free legal aid providers in Texas. Get help with family law, immigration, housing, and more.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#FFFFFF",
