@@ -53,3 +53,7 @@ For the `mylegalaid-website` project make the following changes:
 - Before making any changes, create an implementation plan and then execute the plan. Do not ask me to review or approve the plan, just proceed with the plan.
 - As part of the changes, always update sitemap.xml and all other objects related to SEO that may be impacted with the changes.
 - Pull from GitHub before making any code changes. Commit and Push to GitHub after finishing code changes. Work directly on the `main` branch.
+
+
+
+
